@@ -9,26 +9,7 @@ const nextConfig: NextConfig = {
     ignoreBuildErrors: true,
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: "https",
-        hostname: "res.cloudinary.com",
-      },
-      {
-        protocol: "https",
-        hostname: "m.media-amazon.com",
-      },
-      {
-        protocol: "https",
-        hostname: "ik.imagekit.io",
-        port: "",
-      },
-      {
-        protocol: "https",
-        hostname: "i.gr-assets.com",
-        port: "",
-      },
-    ],
+    remotePatterns: [],
   },
 };
 
