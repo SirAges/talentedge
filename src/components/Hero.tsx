@@ -24,7 +24,7 @@ const Hero = () => {
             We design and deliver competency-based training programs tailored to
             enhance employee skills
           </p>
-          <div className="flex flex-col md:flex-row gap-x-4">
+          <div className="flex flex-col md:flex-row gap-x-4 gap-y-2">
             <Link href="solutions">
               <Button>
                 Start the Transformation <ArrowRightCircle />
