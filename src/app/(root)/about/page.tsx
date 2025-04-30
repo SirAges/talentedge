@@ -13,7 +13,7 @@ const coreValues = [
 const page = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 py-2 gap-x-5 px-5 ">
-      <div className="flex flex-col relative h-44 mb-5 md:mb-0 md:h-[calc(100vh-4rem)] w-full">
+      <div className="flex relative h-44 mb-5 md:mb-0 md:h-[calc(100vh-4rem)] w-full">
         <Image
           src={aboutImage}
           fill
@@ -41,7 +41,7 @@ const page = () => {
           organizational excellence across Africa and beyond.
         </p>
         <h1 className="text-2xl font-semibold  capitalize">Core Values</h1>
-        <ul className="px-5 flex flex-col gap-y-2">
+        <ul className="px-5 flex-1 flex flex-col gap-y-2">
           {coreValues.map((value) => (
             <li
               key={value}
