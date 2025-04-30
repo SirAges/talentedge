@@ -137,7 +137,7 @@ const Header = async () => {
               </div>
             ) : (
               <Button
-                onClick={signOut}
+                // onClick={signOut}
                 className={cn(
                   buttonVariants({ variant: "link" }),
                   "hover:no-underline"

@@ -25,7 +25,7 @@ const Hero = () => {
             enhance employee skills
           </p>
           <div className="flex flex-col md:flex-row gap-x-4 gap-y-2">
-            <Link href="solutions">
+            <Link href="solutions text-white">
               <Button>
                 Start the Transformation <ArrowRightCircle />
               </Button>

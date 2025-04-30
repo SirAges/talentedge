@@ -21,7 +21,7 @@ const Testimonial = () => {
         {reviews.data.map(({ id, clientName, position, review, rating }) => (
           <div
             key={id}
-            className="md:w-1/3 bg-background px-4 py-4 rounded-lg cursor-pointer"
+            className="md:w-1/3 grow bg-background px-4 py-4 rounded-lg cursor-pointer"
           >
             <div className="flex items-center justify-between py-2">
               <div className="px-2 text-xs space-y-2">
