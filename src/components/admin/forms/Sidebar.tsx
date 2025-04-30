@@ -1,12 +1,14 @@
 "use client";
 import { COMPANY_NAME } from "@/lib/constants";
 import { adminNavigation } from "@/lib/data";
-import { cn } from "@/lib/utils";
+import { cn, getInitials } from "@/lib/utils";
+import { useSession } from "next-auth/react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const Sidebar = () => {
   const pathname = usePathname();
+  const { data } = useSession();
 
   return (
     <section
@@ -38,10 +40,10 @@ const Sidebar = () => {
         })}
         <div className="whitespace-nowrap gap-x-1 items-center flex px-2">
           <p className="w-7 h-7 rounded-full flex items-center justify-center bg-primary text-white">
-            JN
+            {getInitials(data?.user?.name)}
           </p>
           <h3 className="  px-3 text-xs">
-            Welcome <strong>Jonathan</strong>
+            Welcome <strong>{data?.user?.name?.split(" ")[0]}</strong>
           </h3>
         </div>
       </div>

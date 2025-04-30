@@ -66,7 +66,6 @@ export const signUp = async (params: AuthCredentials) => {
       companyName,
     });
 
-
     await signInWithCredentials({ email, password });
 
     return { success: true };
@@ -76,6 +75,6 @@ export const signUp = async (params: AuthCredentials) => {
   }
 };
 
-  export const handleSignOut = async () => {
-    await signOut();
-  };
+export const handleSignOut = async () => {
+ await signOut();
+};

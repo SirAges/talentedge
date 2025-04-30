@@ -13,7 +13,7 @@ const coreValues = [
 const page = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 py-2 gap-x-5 px-5 ">
-      <div className="flex flex-col relative h-[calc(100vh-4rem)] w-full">
+      <div className="flex flex-col relative h-44 mb-5 md:mb-0 md:h-[calc(100vh-4rem)] w-full">
         <Image
           src={aboutImage}
           fill

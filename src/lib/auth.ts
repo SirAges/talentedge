@@ -38,6 +38,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         return {
           id: user[0].id.toString(),
           email: user[0].email,
+          role: user[0].role,
           name: `${user[0].lastName} ${user[0].firstName}`,
         } as User;
       },
@@ -51,6 +52,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       if (user) {
         token.id = user.id;
         token.email = user.email;
+        //@ts-expect-error add role to User & AdapterUser
+        token.role = user.role;
         token.name = user.name;
       }
       return token;
@@ -58,6 +61,8 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
     async session({ session, token }) {
       if (session.user) {
         session.user.id = token.id as string;
+        //@ts-expect-error add role to User & AdapterUser
+        session.user.role = token.role as string;
         session.user.email = token.email as string;
         session.user.name = token.name;
       }

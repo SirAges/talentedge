@@ -29,7 +29,7 @@ const Hero = () => {
             <Link href="solutions text-white">
               <Link
                 href="solutions"
-                className={cn(buttonVariants())}
+                className={cn(buttonVariants(), "text-white")}
               >
                 Start the Transformation <ArrowRightCircle />
               </Link>

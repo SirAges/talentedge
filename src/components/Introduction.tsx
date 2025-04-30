@@ -1,5 +1,7 @@
 import { ArrowRightCircle } from "lucide-react";
-import { Button } from "./ui/button";
+import { buttonVariants } from "./ui/button";
+import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const Introduction = () => {
   return (
@@ -18,7 +20,7 @@ const Introduction = () => {
         </p>
       </div>
       <div className="flex flex-col md:flex-row  gap-x-10 w-full ">
-        <div className="flex flex-col flex-1 bg-background px-5 space-y-4 rounded-lg justify-between">
+        <div className="flex flex-col flex-1 bg-background px-5 py-5 space-y-4 rounded-lg justify-between">
           <h3 className="font-medium text-2xl py-5">
             Our Approach to Leadership Development
           </h3>
@@ -34,14 +36,14 @@ const Introduction = () => {
             </p>
           </div>
 
-          <Button
-            className="w-fit"
-            variant={"outline"}
+          <Link
+            href="courses"
+            className={cn(buttonVariants({ variant: "outline" }), "w-fit")}
           >
             Show more <ArrowRightCircle />
-          </Button>
+          </Link>
         </div>
-        <div className="flex-1 bg-background  px-5 space-y-4 rounded-lg">
+        <div className="flex-1 bg-background  px-5 py-5 space-y-4 rounded-lg">
           <h3 className="font-medium text-2xl py-5">
             Leadership development expands a leader&apos;s impact
           </h3>
@@ -67,10 +69,12 @@ const Introduction = () => {
               continuous learning strategies to empower your workforce.
             </p>
           </div>
-
-          <Button>
+          <Link
+            href="solutions"
+            className={cn(buttonVariants())}
+          >
             Show more Solutions <ArrowRightCircle />
-          </Button>
+          </Link>
         </div>
       </div>
     </section>

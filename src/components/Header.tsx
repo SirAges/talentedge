@@ -25,16 +25,22 @@ const Header = async () => {
         id="header"
         className="z-50 hidden md:flex bg-background sticky top-0 items-center h-12 px-3 lg:px-10  gap-x-2"
       >
-        <div className="w-7 h-7 relative">
-          <Image
-            className="rounded-full object-center object-cover"
-            fill
-            priority
-            alt="logo"
-            src={Logo}
-          />
-        </div>
-        <h1 className="font-semibold text-md">{COMPANY_NAME}</h1>
+        <Link
+          href="/"
+          className="cursor-pointer flex gap-x-2 items-center"
+        >
+          <div className="w-7 h-7 relative ">
+            <Image
+              className="rounded-full object-center object-cover"
+              fill
+              priority
+              alt="logo"
+              src={Logo}
+            />
+          </div>
+          <h1 className="font-semibold text-md">{COMPANY_NAME}</h1>
+        </Link>
+
         <nav className="flex flex-1 justify-center items-center gap-x-5">
           {navigation.map(({ id, link, name }) => (
             <Link
@@ -77,9 +83,9 @@ const Header = async () => {
           <div className="flex items-center justify-between w-full">
             <Link
               href={"/"}
-              className="flex items-center gap-x-2"
+              className="flex items-center gap-x-2 cursor-pointer"
             >
-              <div className="w-7 h-7 relative">
+              <div className="w-7 h-7 relative ">
                 <Image
                   className="rounded-full object-center object-cover"
                   fill
@@ -104,7 +110,7 @@ const Header = async () => {
                   asChild
                   key={id}
                 >
-                  <div className="flex items-center gap-x-2">
+                  <div className="flex items-center gap-x-2 cursor-pointer">
                     <div className="w-7 h-7 relative">
                       <Image
                         className="rounded-full object-center object-cover"
