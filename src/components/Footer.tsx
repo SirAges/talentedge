@@ -12,7 +12,7 @@ const Footer = () => {
       id="footer"
       className="bg-foreground text-background font-extralight px-4 py-4 space-y-4"
     >
-      <div className="flex gap-x-5">
+      <div className="flex-col md:flex-row flex gap-x-5">
         <div className="flex-3 space-y-2">
           <h1 className="max-w-3/4 text-2xl">
             Empowering Excellence in Workspace Development and Strategic
