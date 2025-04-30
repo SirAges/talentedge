@@ -29,7 +29,7 @@ const Header = async () => {
           href="/"
           className="cursor-pointer flex gap-x-2 items-center"
         >
-          <div className="w-7 h-7 relative ">
+          <div className="h-7 relative ">
             <Image
               className="rounded-full object-center object-cover"
               fill
@@ -111,12 +111,12 @@ const Header = async () => {
                   key={id}
                 >
                   <div className="flex items-center gap-x-2 cursor-pointer">
-                    <div className="w-7 h-7 relative">
+                    <div className="min-w-7 max-w-7 h-7 relative">
                       <Image
                         className="rounded-full object-center object-cover"
                         fill
                         priority
-                        alt="logo"
+                        alt={name}
                         src={image}
                       />
                     </div>
