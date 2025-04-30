@@ -5,7 +5,7 @@ import { Button, buttonVariants } from "./ui/button";
 import { COMPANY_NAME } from "@/lib/constants";
 import { navigation } from "@/lib/data";
 import { cn } from "@/lib/utils";
-import { auth, signOut } from "@/lib/auth";
+import { auth } from "@/lib/auth";
 import {
   Sheet,
   SheetClose,
@@ -14,9 +14,11 @@ import {
   SheetTrigger,
 } from "./ui/sheet";
 import { Menu } from "lucide-react";
+import { handleSignOut } from "@/lib/actions/auth.actions";
 
 const Header = async () => {
   const session = await auth();
+
   return (
     <>
       <header
@@ -60,11 +62,8 @@ const Header = async () => {
           </div>
         ) : (
           <Button
-            onClick={signOut}
-            className={cn(
-              buttonVariants({ variant: "link" }),
-              "hover:no-underline"
-            )}
+            onClick={handleSignOut}
+            className={cn()}
           >
             Sign out
           </Button>
@@ -96,7 +95,7 @@ const Header = async () => {
             </SheetTrigger>
           </div>
 
-          <SheetContent className="w-1/2">
+          <SheetContent className="w-1/2 py-5 px-2">
             <SheetTitle></SheetTitle>
 
             <nav className="flex flex-col flex-1 gap-y-5 px-5">
@@ -121,7 +120,7 @@ const Header = async () => {
               ))}
             </nav>
             {!session ? (
-              <div className="flex gap-x-2">
+              <div className="flex gap-x-2 px-2 py-3">
                 <Link
                   href={"/auth/sign-in"}
                   className={cn(buttonVariants({ variant: "default" }))}
@@ -137,11 +136,8 @@ const Header = async () => {
               </div>
             ) : (
               <Button
-                // onClick={signOut}
-                className={cn(
-                  buttonVariants({ variant: "link" }),
-                  "hover:no-underline"
-                )}
+                onClick={handleSignOut}
+                className={cn()}
               >
                 Sign out
               </Button>

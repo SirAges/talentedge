@@ -1,14 +1,11 @@
 import solutionImage from "@/assets/images/solution.jpg";
 import courseImage from "@/assets/images/course.jpg";
-
 import eventImage from "@/assets/images/event.png";
-
 import scheduleImage from "@/assets/images/schedule.png";
-
 import resourcesImage from "@/assets/images/resource.png";
 import consultantImage from "@/assets/images/consultant.png";
-
 import userImage from "@/assets/images/user.png";
+import aboutImage from "@/assets/images/about.jpg";
 
 export const navigation = [
   {
@@ -47,7 +44,7 @@ export const navigation = [
     id: "about",
     link: "/about",
     name: "About Us",
-    image: eventImage,
+    image: aboutImage,
   },
 ];
 export const adminNavigation = [

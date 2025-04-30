@@ -1,10 +1,11 @@
 import { ArrowRightCircle, Building2, User, Users } from "lucide-react";
-import { Button } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import Image from "next/image";
 import Image1 from "@/assets/images/img1.jpeg";
 import Image2 from "@/assets/images/img2.jpeg";
 import TrustedCompany from "./TrustedCompany";
 import Link from "next/link";
+import { cn } from "@/lib/utils";
 
 const Hero = () => {
   return (
@@ -26,9 +27,12 @@ const Hero = () => {
           </p>
           <div className="flex flex-col md:flex-row gap-x-4 gap-y-2">
             <Link href="solutions text-white">
-              <Button>
+              <Link
+                href="solutions"
+                className={cn(buttonVariants())}
+              >
                 Start the Transformation <ArrowRightCircle />
-              </Button>
+              </Link>
             </Link>
             <Link href="contact">
               <Button variant={"outline"}>Contact Us</Button>
