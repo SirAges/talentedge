@@ -43,6 +43,12 @@ export const navigation = [
     name: "Events",
     image: eventImage,
   },
+  {
+    id: "about",
+    link: "/about",
+    name: "About Us",
+    image: eventImage,
+  },
 ];
 export const adminNavigation = [
   {

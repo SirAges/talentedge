@@ -39,8 +39,8 @@ const Programs = () => {
             </div>
           ))}
         </div>
-        <div className="flex-1 bg-background  px-5  space-y-4 rounded-lg">
-          <div className="w-full h-[40vh] relative py-2">
+        <div className="flex-1 bg-background py-5 px-5  space-y-4 rounded-lg">
+          <div className="w-full h-[40vh] relative">
             <Image
               className="rounded-lg object-center object-cover"
               fill

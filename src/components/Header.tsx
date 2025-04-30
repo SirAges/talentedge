@@ -1,11 +1,11 @@
 import Image from "next/image";
 import Logo from "@/assets/images/logo.png";
 import Link from "next/link";
-import { buttonVariants } from "./ui/button";
+import { Button, buttonVariants } from "./ui/button";
 import { COMPANY_NAME } from "@/lib/constants";
 import { navigation } from "@/lib/data";
 import { cn } from "@/lib/utils";
-import { auth } from "@/lib/auth";
+import { auth, signOut } from "@/lib/auth";
 import {
   Sheet,
   SheetClose,
@@ -59,15 +59,15 @@ const Header = async () => {
             </Link>
           </div>
         ) : (
-          <Link
-            href="/about"
+          <Button
+            onClick={signOut}
             className={cn(
               buttonVariants({ variant: "link" }),
               "hover:no-underline"
             )}
           >
-            About Us
-          </Link>
+            Sign out
+          </Button>
         )}
       </header>
       <header
@@ -136,15 +136,15 @@ const Header = async () => {
                 </Link>
               </div>
             ) : (
-              <Link
-                href="/about"
+              <Button
+                onClick={signOut}
                 className={cn(
                   buttonVariants({ variant: "link" }),
                   "hover:no-underline"
                 )}
               >
-                About Us
-              </Link>
+                Sign out
+              </Button>
             )}
           </SheetContent>
         </Sheet>

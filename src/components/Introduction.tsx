@@ -19,7 +19,7 @@ const Introduction = () => {
       </div>
       <div className="flex flex-col md:flex-row  gap-x-10 w-full ">
         <div className="flex flex-col flex-1 bg-background px-5 space-y-4 rounded-lg justify-between">
-          <h3 className="font-medium text-2xl">
+          <h3 className="font-medium text-2xl py-5">
             Our Approach to Leadership Development
           </h3>
           <div className="grow space-y-3">
@@ -42,7 +42,7 @@ const Introduction = () => {
           </Button>
         </div>
         <div className="flex-1 bg-background  px-5 space-y-4 rounded-lg">
-          <h3 className="font-medium text-2xl">
+          <h3 className="font-medium text-2xl py-5">
             Leadership development expands a leader&apos;s impact
           </h3>
           <div className="flex-1 space-y-3">
