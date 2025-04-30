@@ -86,8 +86,9 @@ const Page = () => {
                 </p>
                 <p className="text-green-600">{access}</p>
               </div>
-
-              <p>{description}</p>
+              <div className="flex-1">
+                <p>{description}</p>
+              </div>
               <Button>
                 Download <ArrowRightCircle />
               </Button>
